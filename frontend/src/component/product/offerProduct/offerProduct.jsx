@@ -48,7 +48,7 @@ export default class OfferProduct extends Component {
                     price: "7,000,000",
                     ProductImage: productimage,
                     offerPercentage: "40%",
-                    priceAfteroff: "4,000,000"
+                    priceAfteroff: "4,000,000",
                 },
             ]
         }

@@ -17,15 +17,14 @@ export default class ProductCart extends Component {
                     <p className='offerPercentage'>{this.props.offerPercentage}</p>
                 )}
 
-                {/* product cart place */}
-                {this.props.place && (
-                    <p className='place'>{this.props.place}</p>
-                )}
-
                 {/* product cart name title */}
                 <h3 className='perfum-title'>
                     {this.props.perfumName}
                 </h3>
+                {/* perfum discription */}
+                <p className='perfum-discription'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, quia?
+                </p>
 
                 <div className='product-text'>
 
@@ -45,7 +44,6 @@ export default class ProductCart extends Component {
                     )}
 
                 </div>
-                    <button className='cartbtn'>مشاهده</button>
             </div>
         )
     }

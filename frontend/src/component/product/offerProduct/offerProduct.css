@@ -5,7 +5,7 @@
   gap: 16px;
 
   width: 80%;
-  max-width: 1400px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .offertitle {
@@ -20,11 +20,11 @@
 }
 
 .offertitle::after,
-.offertitle::before{
+.offertitle::before {
   content: "";
   width: 455px;
   height: 2px;
-  background: #eed9b9;
+  background: #420004;
 }
 
 .offerPercentage {
@@ -32,14 +32,41 @@
   top: 15px;
   left: 15px;
 
-
-  background: #d53e0f;
-  color: var(--base-text);
-
+  background-color: #c7d3c0;
+  color: #420004;
 
   padding: 7px 12px;
   border-radius: 8px;
 
   font-size: 14px;
   font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .offerProductCart {
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    padding: 0 20px 15px;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+  }
+  .offerProductCart::-webkit-scrollbar {
+    display: none;
+  }
+  .offertitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+  }
+  .offertitle::before,
+  .offertitle::after {
+    content: "";
+    height: 2px;
+    flex: 1;
+  }
 }

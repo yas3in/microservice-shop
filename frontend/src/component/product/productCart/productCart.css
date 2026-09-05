@@ -1,14 +1,16 @@
 .ProductCart {
+  max-width: 300px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   position: relative;
 
-  background: #5e0006;
-
-  border-radius: 15px;
+  background-color: #C7D3C0 ;
+  border: 1px solid rgba(66, 0, 4, 0.12);
+  border-radius: 18px;
 
   margin-bottom: 50px;
   margin-top: 50px;
@@ -28,27 +30,22 @@
   border-top-right-radius: 8px;
 
   width: 100%;
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 1 / 1;
   transition: 0.4 ease;
 }
 
-
 .perfum-title {
-  color: var(--base-text);
+  color: #420004;
+  padding: 10px 0 0 0;
 }
-.cartbtn {
-  background: #9b0f06;
+.perfum-discription {
+  text-align: justify;
+  padding: 0 20px;
   color: var(--base-text);
-
-  align-items: center;
-
-  border: none;
-  border-radius: 5px;
-
-  padding: 4px 20px;
-  margin-bottom: 10px;
+  line-height: 1.3;
+  margin-top: 0px;
 }
 
 /* offer product */
@@ -56,6 +53,7 @@
   opacity: 50%;
   text-decoration: line-through;
   font-size: 14px;
+  color: #8f7777;
 }
 
 .offerPrice {
@@ -67,17 +65,17 @@
 
   font-weight: bold;
   font-size: 20px;
-  color: var(--base-text);
+  color: #420004;
 }
 /* best seels */
-.place {
-  background: var(--base-text);
-  padding: 2px 5px;
-  border-radius: 5px;
-  position: absolute;
-  left: 20px;
-  top: 133px;
-}
 .BSPprice {
+  font-weight: bold;
   color: var(--base-text);
+}
+@media (max-width: 900px) {
+  .ProductCart {
+    width: 82vw;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
 }

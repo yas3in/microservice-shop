@@ -5,7 +5,7 @@
   gap: 16px;
 
   width: 80%;
-  max-width: 1400px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .bestseals-tltle {
@@ -23,5 +23,31 @@
   content: "";
   width: 500px;
   height: 2px;
-  background: #eed9b9;
+  background-color: #420004;
+}
+@media (max-width : 900px) {
+  .best-seel-product{
+    display: flex;
+    gap: 16px;
+
+    overflow-x: auto;
+    padding: 0 20px 15px;
+
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .best-seel-product::-webkit-scrollbar{
+    display: none;
+  }
+  .bestseals-tltle{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .bestseals-tltle::after, 
+  .bestseals-tltle::before{
+    content: "";
+    height: 2px;
+    flex: 1;
+  } 
 }

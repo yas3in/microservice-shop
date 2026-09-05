@@ -36,8 +36,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background: rgba(94, 0, 6, 0.45);
-  backdrop-filter: blur(10px);
+  background: rgb(66, 0, 4);
 
   border: 1px solid rgba(238, 217, 185, 0.15);
   border-radius: 20px;
@@ -55,7 +54,7 @@
 
   gap: 8px;
 
-  color: var(--base-text);
+  color: #eed9b9;
 
   min-width: 160px;
 }
@@ -68,7 +67,7 @@
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(238, 217, 185, 0.6);
+  border: 1px solid #eed9b9;
 
   border-radius: 50%;
 
@@ -116,7 +115,7 @@
 .navbar-menu a {
   position: relative;
 
-  color: var(--base-text);
+  color: #eed9b9;
 
   text-decoration: none;
 
@@ -136,13 +135,13 @@
   width: 0;
   height: 1px;
 
-  background: #d53e0f;
+  background: #c7d3c0;
 
   transition: width 0.3s ease;
 }
 
 .navbar-menu a:hover {
-  color: var(--base-text);
+  color: #c7d3c0;
 }
 
 .navbar-menu a:hover::after {
@@ -157,7 +156,6 @@
   display: flex;
   align-items: center;
 
-  gap: 20px;
 
   min-width: 160px;
 
@@ -165,7 +163,10 @@
 }
 
 .signin {
-  color: var(--base-text);
+  color: #eed9b9; 
+
+  padding: 5px 10px;
+  border-radius: 20px;
 
   text-decoration: none;
 
@@ -177,7 +178,8 @@
 }
 
 .signin:hover {
-  color: var(--base-text);
+  color: #350003;
+  background-color: #eed9b9;
 }
 
 /* =========================
@@ -228,10 +230,12 @@ MOBILE NAVBAR
   padding: 10px 0;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 30px;
 
-  background-color: #5E0006;
+  background-color: #5e0006;
+
+  z-index: 1000;
 }
 
 .mobile-navbar-item a {
