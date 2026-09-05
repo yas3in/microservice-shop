@@ -63,6 +63,26 @@ services:
     networks:
       - microshop-prod-net
 
+  # Internal Catalogue Microservice - No host port exposure
+  catalogue-service:
+    build:
+      context: ..
+      dockerfile: backend/catalogue/Dockerfile
+    container_name: microshop-prod-catalogue
+    restart: always
+    environment:
+      - DEBUG=False
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-prod_user}:${POSTGRES_PASSWORD:-prod_secure_password}@postgres:5432/${POSTGRES_DB:-microshop_prod}
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=${SECRET_KEY:-prod-super-secret-key-32-chars-minimum}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - microshop-prod-net
+
   # Public API Gateway - ONLY entrypoint exposing port 8000
   gateway:
     build:
@@ -75,7 +95,9 @@ services:
     environment:
       - DEBUG=False
       - AUTH_SERVICE_URL=http://auth-service:8001
+      - CATALOGUE_SERVICE_URL=http://catalogue-service:8002
     depends_on:
       - auth-service
+      - catalogue-service
     networks:
       - microshop-prod-net

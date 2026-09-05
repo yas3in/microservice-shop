@@ -1,0 +1,2 @@
+"""Catalogue Microservice package."""
+

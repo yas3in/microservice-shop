@@ -20,11 +20,13 @@ class Settings(BaseSettings):
     # Gateway Routing & Internal Microservice URLs
     GATEWAY_PORT: int = 8000
     AUTH_SERVICE_PORT: int = 8001
+    CATALOGUE_SERVICE_PORT: int = 8002
     PRODUCT_SERVICE_PORT: int = 8002
     ORDER_SERVICE_PORT: int = 8003
 
     AUTH_SERVICE_URL: str = "http://auth-service:8001"
-    PRODUCT_SERVICE_URL: str = "http://product-service:8002"
+    CATALOGUE_SERVICE_URL: str = "http://catalogue-service:8002"
+    PRODUCT_SERVICE_URL: str = "http://catalogue-service:8002"
     ORDER_SERVICE_URL: str = "http://order-service:8003"
 
     model_config = SettingsConfigDict(

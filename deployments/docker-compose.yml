@@ -64,6 +64,26 @@ services:
     networks:
       - microshop-net
 
+  # Internal Catalogue Microservice - No host port exposure
+  catalogue-service:
+    build:
+      context: ..
+      dockerfile: backend/catalogue/Dockerfile
+    container_name: microshop-catalogue-service
+    restart: always
+    environment:
+      - DEBUG=${DEBUG:-True}
+      - DATABASE_URL=${DATABASE_URL:-postgresql+asyncpg://micro_user:micro_pass@postgres:5432/microshop_db}
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379/0}
+      - SECRET_KEY=${SECRET_KEY:-super-secret-key-change-in-production}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - microshop-net
+
   # Public API Gateway - ONLY service exposing port 8000 to the outside world
   gateway:
     build:
@@ -76,7 +96,9 @@ services:
     environment:
       - DEBUG=${DEBUG:-True}
       - AUTH_SERVICE_URL=http://auth-service:8001
+      - CATALOGUE_SERVICE_URL=http://catalogue-service:8002
     depends_on:
       - auth-service
+      - catalogue-service
     networks:
       - microshop-net
