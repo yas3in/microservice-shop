@@ -23,3 +23,4 @@ COPY backend/catalogue /app/backend/catalogue
 EXPOSE 8002
 
 CMD ["python", "-m", "backend.catalogue.main"]
+

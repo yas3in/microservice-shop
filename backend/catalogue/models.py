@@ -197,3 +197,4 @@ class ProductDetailRead(ProductRead):
     brand_name: Optional[str] = None
     type_title: Optional[str] = None
     attributes: List[ProductAttributeValueRead] = []
+

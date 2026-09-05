@@ -209,3 +209,4 @@ async def test_gateway_catalogue_proxy_routing() -> None:
             assert isinstance(resp.json(), list)
     finally:
         await gateway_network.stop()
+
