@@ -9,6 +9,14 @@ from alembic import context
 # Import project settings and models to ensure they register in SQLModel.metadata
 from backend.config.config import settings
 from backend.auth_service.models import User
+from backend.catalogue.models import (
+    Category,
+    Brand,
+    ProductType,
+    ProductAttribute,
+    Product,
+    ProductAttributeValue
+)
 
 # Alembic Config object
 config = context.config
