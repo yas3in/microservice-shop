@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './header.css'
 import Navbar from './navbar/navbar'
+import headerMobileIMG from "../../assets/picture/mobile-header.png"
 
 export default class Header extends Component {
   constructor(props) {
@@ -41,7 +42,20 @@ export default class Header extends Component {
                   <span>Étoile</span>
                 </div>
               </div>
-              <div className='mobile-header-image'></div>
+              <img src={headerMobileIMG} alt="" />
+              <div className='mobile-hwader-content'>
+                <span className='mobile-header-span'>مجموعه سلطنتی فرانسه و شرق</span>
+                <h1 className='mobile-header-title'>
+                  عطرهای اصل و خاص
+                  <br />
+                  تجلی شکوه و اصالت
+                </h1>
+                <p className='mobile-header-text'>
+                  کشف رایحه‌های ناب و نفیس که هویت شما را به تصویر می‌کشند.
+                  با نوآر اسنس، امضای بویایی منحصر‌به‌فرد خود را در میان برترین برندهای
+                  نیش جهان بیابید.
+                </p>
+              </div>
               <Navbar></Navbar>
             </div>
           </>
@@ -53,7 +67,7 @@ export default class Header extends Component {
               <div className='header-content'>
 
                 <span>مجموعه سلطنتی فرانسه و شرق</span>
-                
+
                 <h1>
                   عطرهای اصل و خاص
                   <br />

@@ -1,8 +1,10 @@
 .header-container {
-  max-width: 1250px;
-  height: 680px;
+  /* max-width: 1250px; */
+  height: 950px;
   margin: 0 auto;
   padding: 0 !important;
+
+  background: url(../../assets/picture/header.png);
 
   display: flex;
   align-items: center;
@@ -11,11 +13,11 @@
 
 /* HEADER TEXT */
 .header-content {
+  margin: 0 250px 0;
   display: flex;
   flex-direction: column;
   width: 50%;
   direction: rtl;
-
 }
 .header-content span {
   display: flex;
@@ -24,13 +26,12 @@
 
   color: var(--primary);
   font-weight: 500;
-
 }
-.header-content span::before{
+.header-content span::before {
   content: "";
   width: 40px;
   height: 1px;
-  
+
   background: var(--primary);
   flex-shrink: 0;
 }
@@ -38,7 +39,6 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 125%;
-
 
   color: var(--text);
 
@@ -56,7 +56,7 @@
   margin: 0 0 28px;
 }
 .header-button {
- max-width: fit-content;
+  max-width: fit-content;
 
   background: var(--primary);
   color: var(--background);
@@ -107,12 +107,50 @@ MOBILE HEADER
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.mobile-header-image {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1200 / 600;
+.mobile-header img {
+  aspect-ratio: 1 / 1;
 
-  background: url(../../assets/picture/headerimage.png);
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+}
+.mobile-hwader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  direction: rtl;
+  padding-top: 20px;
+}
+.mobile-header-span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--primary);
+}
+
+.mobile-header-span::after {
+  content: "";
+  height: 1px;
+  width: 70px;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+.mobile-header-span::before {
+  content: "";
+  height: 1px;
+  width: 70px;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+.mobile-header-title {
+  color: var(--primary);
+}
+.mobile-header-text {
+  color: var(--primary);
+
+  max-width: 350px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0 0 30px 0;
 }

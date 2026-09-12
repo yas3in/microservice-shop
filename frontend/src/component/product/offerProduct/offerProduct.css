@@ -1,12 +1,11 @@
-/* =========================
-   OFFER TITLE
-========================= */
+/* OFFER TITLE */
+
 .offer-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 1250px;
-  margin: 30px auto;
+  margin: 50px auto;
 }
 .right-txt {
   text-align: right;
@@ -31,13 +30,30 @@
   background-color: var(--accent);
   flex-shrink: 0;
 }
+/* OFFER TITLE */
+
 .offer-product {
   width: 1250px;
   margin: 0 auto;
 }
 .offer-product .swiper {
   width: 100%;
+  position: relative;
 }
+.offer-product .swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 15px;
+
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.45), transparent);
+}
+
 .offer-product .swiper-slide {
   display: flex;
   justify-content: center;

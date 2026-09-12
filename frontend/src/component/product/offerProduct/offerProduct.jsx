@@ -52,8 +52,9 @@ export default class OfferProduct extends Component {
                 {
                     id: 6,
                     perfumName: "test",
-                    priceforBSP: "1,000,000",
+                    price: "1,500,000",
                     ProductImage: productimage,
+                    priceAfteroff: "1,000,000"
                 }
             ],
 

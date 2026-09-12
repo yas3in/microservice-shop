@@ -8,11 +8,13 @@
 
   display: flex;
   flex-direction: column;
+  
 
   direction: rtl;
   flex-shrink: 0;
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transition: .3s ease;
 }
 
 /* IMAGE */
@@ -63,9 +65,10 @@
 .product-text {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   
 
-  gap: 27px;
+  
 
   padding: 0 16px 16px;
 }
@@ -169,6 +172,6 @@
   }
   .product-text button {
     padding: 8px 5px;
-    font-size: 9px;
+    font-size: 8px;
   }
 }

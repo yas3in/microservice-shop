@@ -1,10 +1,30 @@
 .best-seal-product {
   width: 1250px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 .best-seal-product .swiper {
   width: 100%;
+  position: relative;
+}
+
+.best-seal-product .swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+
+  border-radius: 15px;
+
+    background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.45),
+    transparent
+  );
 }
 
 .best-seal-product .swiper-slide {
@@ -16,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
   width: 1250px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 .right-text {
   text-align: right;
