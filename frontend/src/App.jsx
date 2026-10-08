@@ -16,7 +16,7 @@ import ScrollToTop from './scrollToTop'
 export default function App() {
   return (
     <>
-    <ScrollToTop/>
+      <ScrollToTop />
       {/* main page */}
       <Routes>
         <Route
@@ -36,6 +36,7 @@ export default function App() {
           path="/product/:id"
           element={
             <>
+              {/* <Header /> */}
               <Navbar />
               <ProductDetail />
             </>
